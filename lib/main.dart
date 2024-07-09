@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   }
 
-  final String htmlContent = '<p>Hello World.</p>\n<p></p>\n<p>Go to <a href=\"https://learn.microsoft.com/en-us/azure/devops/pipelines/repos/multi-repo-checkout?view=azure-devops\">my azure doc page</a></p>\n<p></p>';
+  final String htmlContent = '<p>Hello World.</p>\n<p></p>\n<p>Click here - does it open a  browser?  <a href=\"https://learn.microsoft.com/en-us/azure/devops/pipelines/repos/multi-repo-checkout?view=azure-devops\">my azure doc page</a></p>\n<p></p>';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,6 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HtmlWidget(
               htmlContent,
+            ),
+            HtmlWidget(
+              '<video controls><source src="https://file-examples.com/storage/fe7bf81a86668bb0a9d006b/2017/04/file_example_MP4_640_3MG.mp4" type="video/mp4"></video>',
+              // ... other optional parameters ...
             )
           ],
         ),
